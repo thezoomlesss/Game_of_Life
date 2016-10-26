@@ -29,9 +29,10 @@ float cell_width, cell_height;
 
 void draw()
 {
- // if(frameCount % 60 == 0)
+  if(frameCount % 15 == 0)
   {
     display_board();
+    copy_array();   
     update_board();
   }
 }
@@ -53,6 +54,8 @@ void random_board()
 
 void display_board()
 {
+  background(0);
+  
   for(int i=0; i < col_no; i++)
   {
     for(int j=0; j< row_no; j++)
@@ -79,7 +82,7 @@ void copy_array()
 
 void update_board()
 {
-  copy_array();
+  
   for(int i=0; i < col_no; i++)
   {
     for(int j=0; j< row_no; j++)
@@ -124,8 +127,6 @@ void cells_alive(int x, int y)
     
 
 } // End first if
-  
-  println(counter,"\n");
   
   /*else
   {
